@@ -4,14 +4,14 @@ import { Stack } from 'expo-router'
 
 export default function _layout() {
     const CustomHeaderTitle = (title: string) => {
-        return <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'black' }}>{title}</Text>;
+        return <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'blue' }}>{title}</Text>;
       };
 
   return (
     <Stack 
       screenOptions={{
         headerStyle: { backgroundColor: '#f5f5f5' },
-        headerTintColor: 'black',
+        headerTintColor: 'blue',
         headerTitleAlign: 'center',
       }}
     >

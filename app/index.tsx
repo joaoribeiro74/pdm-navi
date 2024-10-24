@@ -11,12 +11,16 @@ export default function index() {
 
   return (
     <View style={styles.container}>
-        <Link href="/list">
+        <Link style={styles.links} href="/list">
             <Text>Link to list</Text>
         </Link>
+
+        <Link style={styles.links} href={{pathname: "/user/[id]", params: { id: 1 }}}>
+            <Text>Usuário 1</Text>
+        </Link>
         
-        <Link href={`/user/${Math.floor(Math.random() * 100)}`}>
-            <Text>Usuário</Text>
+        <Link style={styles.links} href={{pathname: "/user/[id]", params: { id: Math.floor(Math.random() * 100) }}}>
+            <Text>Usuário 2</Text>
         </Link>
 
         <Button title='List' onPress={handleGoToLinks} />
@@ -30,5 +34,8 @@ const styles = StyleSheet.create({
       backgroundColor: "#fff",
       alignItems: "center",
       justifyContent: "center",
+    },
+    links: {
+      marginBottom: 10,
     },
 })
